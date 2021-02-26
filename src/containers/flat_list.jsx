@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Flat from '../components/flat';
+import Flat from '../containers/flat';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setFlats } from '../actions';
@@ -35,10 +35,10 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapreduxStateToProp(reduxState) {
+function mapReduxStateToProp(reduxState) {
   return {
     flats: reduxState.flats
   };
 }
 
-export default connect(mapreduxStateToProp, mapDispatchToProps) (FlatList);
+export default connect(mapReduxStateToProp, mapDispatchToProps) (FlatList);
